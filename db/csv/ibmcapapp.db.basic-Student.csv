@@ -1,7 +1,0 @@
-studentId,class_id,nameFirst,nameLast,age,gender,city,country,region
-1,3,Anand,Abhi,18,M,Gurgaon,India,India
-2,4,Sam,Pandey,21,F,Bangalore,India,India
-3,3,Pandey,Abhi,18,M,Noida,India,India
-4,4,Sam,Pandey,21,F,Pune,India,India
-5,3,Sri,Abhi,18,M,Delhi,India,India
-6,4,Sam,Pandey,21,F,Gurgaon,India,India
