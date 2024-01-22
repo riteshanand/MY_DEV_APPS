@@ -76,8 +76,8 @@ context master {
 }
 
 context transaction {
-    entity purchaseorder : common.Amount {
-        key NODE_KEY         : common.Guid @title: '{i18n>POKey}';
+    entity purchaseorder : common.Amount ,cuid{
+        // key NODE_KEY         : common.Guid @title: '{i18n>POKey}';//to generate key automatically
             PO_ID            : String(40)  @title: '{i18n>POId}';
             PARTNER_GUID     : Association to master.businesspartner;
             LIFECYCLE_STATUS : String(1);
@@ -88,8 +88,8 @@ context transaction {
                                    on Items.PARENT_KEY = $self;
     }
 
-    entity poitems : common.Amount {
-        key NODE_KEY     : common.Guid @title: '{i18n>POItemKey}';
+    entity poitems : common.Amount,cuid {
+        // key NODE_KEY     : common.Guid @title: '{i18n>POItemKey}'; //to generate key automatically
             PARENT_KEY   : Association to purchaseorder;
             PO_ITEM_POS  : Integer     @title: '{i18n>ItemPOS}';
             PRODUCT_GUID : Association to master.product;
