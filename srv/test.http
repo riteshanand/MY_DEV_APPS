@@ -1,0 +1,80 @@
+###Get the doc.
+http://localhost:4004/odata/v4/CatalogService/EmployeeSet
+
+###
+http://localhost:4004/odata/v4/CatalogService/$metadata
+
+###
+http://localhost:4004/odata/v4/CatalogService
+
+###
+http://localhost:4004/odata/v4/my/ReadEmployeeSrv
+
+
+### #Search
+http://localhost:4004/odata/v4/CatalogService/EmployeeSet?$filter=nameFirst eq 'Maria'
+
+### #Search
+http://localhost:4004/odata/v4/CatalogService/EmployeeSet?$filter=contains(nameFirst,'S')
+
+###
+http://localhost:4004/odata/v4/CatalogService/EmployeeSet/02BD2137-0890-1EEA-A6C2-BB55C19787FB
+
+####
+http://localhost:4004/odata/v4/CatalogService/EmployeeSet/$count
+
+
+
+
+### insert Data in entityset
+POST http://localhost:4004/odata/v4/CatalogService/EmployeeSet
+Content-Type: application/json
+
+ {
+      "nameFirst": "Abhinav",
+      "nameMiddle": null,
+      "nameLast": "Spring",
+      "nameInitials": "Anand",
+      "sex": "F",
+      "language": "E",
+      "phoneNumber": "+1 224 374 524",
+      "email": "sally.spring@itelo.info",
+      "loginName": "SPRINGS",
+      "Currency_code": "USD",
+      "salaryAmount": 100000,
+      "accountNumber": "111222333",
+      "bankId": "510000655",
+      "bankName": "SBI"
+    }
+
+### update 
+PATCH http://localhost:4004/odata/v4/CatalogService/EmployeeSet/d17c69df-2c27-462a-a384-f79e4b7ca83e
+Content-Type: application/json
+
+{
+ "salaryAmount": 1000000
+}
+
+### Delete call
+DELETE http://localhost:4004/odata/v4/CatalogService/EmployeeSet/d17c69df-2c27-462a-a384-f79e4b7ca83e
+
+###Get the doc.
+http://localhost:4004/odata/v4/CatalogService/BusinessPartner
+
+### Delete call
+DELETE http://localhost:4004/odata/v4/CatalogService/BusinessPartner/74867AD200E41EDBA5D8B06885A56052
+
+###Get the doc.
+GET http://localhost:4004/odata/v4/CatalogService/POs/74867AD200E41EDBA5D8B0C98DC28052
+
+###Get the doc.
+POST http://localhost:4004/odata/v4/CatalogService/POs/74867AD200E41EDBA5D8B0C98DC28052/boost
+Content-Type: application/json
+
+{}
+
+###
+http://localhost:4004/odata/v4/CatalogService/POs/nude/largestOrder()
+
+###Get the doc.
+http://localhost:4004/odata/v4/CatalogService/ProductView/74867AD200E41EDBA5D8B06B26EB6052?$expand=To_Items
