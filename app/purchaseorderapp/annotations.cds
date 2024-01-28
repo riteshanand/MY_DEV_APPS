@@ -93,9 +93,13 @@ annotate service.POs with @(
             $Type: 'UI.DataField',
             Value: PARTNER_GUID.COMPANY_NAME
         },
+        // {
+        //     $Type: 'UI.DataField',// changed to ID for HANA deployment
+        //     Value: NODE_KEY
+        // }
         {
             $Type: 'UI.DataField',
-            Value: NODE_KEY
+            Value: ID
         }
     ],
     UI.FieldGroup #Spiderman: {Data: [
@@ -196,7 +200,7 @@ annotate service.POItems with @(
     UI.Identification      : [
         {
             $Type: 'UI.DataField',
-            Value: NODE_KEY
+            Value: ID
         },
         {
             $Type: 'UI.DataField',
@@ -255,3 +259,5 @@ annotate service.ProductSet with @(UI.Identification: [{
     $Type: 'UI.DataField',
     Value: DESCRIPTION
 }]);
+
+//comment to check CI/CD
